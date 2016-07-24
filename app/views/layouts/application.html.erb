@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Porkerhands</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<% flash.each do |key, value| %>
+    <%= content_tag(:div, simple_format(value), class: "#{key}") %>
+<% end %>
+
+</body>
+</html>

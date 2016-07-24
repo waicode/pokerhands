@@ -1,0 +1,16 @@
+<div id="wrapper">
+  <div id="header">
+    <h1><i class="fa fa-flip-horizontal fa-hand-lizard-o"></i> Check a Porker Hand <i class="fa fa-hand-lizard-o"></i></h1>
+  </div>
+  <div id="contents">
+    <%= form_tag('/check', :method => :put) do %>
+        <%= label_tag(:cards, "Cards:") %>
+        <%= text_field_tag(:cards, session[:cards], placeholder:"5つのカード文字列を入力", size: "30") %>
+        <%= submit_tag("Check") %>
+    <% end %>
+    <div><p>Hand: <%= session[:hand_name] %></p></div>
+  </div>
+  <div id="footer">
+    <small>©Copyright<%= Time.now.strftime("%Y")%> porkerhands All Rights Reserved.</small>
+  </div>
+</div>
