@@ -6,11 +6,11 @@ class ApplicationController < ActionController::Base
   rescue_from Exception, with: :render_500
 
   def render_404
-    redirect_to root_path, alert: "不正なURLです。"
+    redirect_to root_path, alert: MSG_WEBALT_INV_URL
   end
 
   def render500
-    redirect_to root_path, alert: "システムエラーが発生しました。"
+    redirect_to root_path, alert: MSG_WEBALT_SYS_ERR
   end
 
 end

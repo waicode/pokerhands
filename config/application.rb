@@ -25,9 +25,13 @@ module Porkerhands
     # api settings
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
     config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+    config.autoload_paths += %W(#{config.root}/app/api/v1/lib)
 
     config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja
+
+    # JSONが壊れている場合のエラーハンドリング
+    config.middleware.insert_before ActionDispatch::ParamsParser, "ErrorHandlingMiddleware::ParsingFailureToJSON"
 
   end
 end

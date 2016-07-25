@@ -3,7 +3,7 @@ require 'rails_helper'
 
 include Const
 
-describe 'Card Check' do
+describe 'Cards Check' do
 
   describe 'Style Check' do
 

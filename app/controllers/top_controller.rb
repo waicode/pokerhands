@@ -23,11 +23,11 @@ class TopController < ApplicationController
     unless schk_rslt[:result]
       if schk_rslt[:targets].present?
         schk_rslt[:targets].each{ |target|
-          msgs.push("#{target[:number]}番目のカード指定文字が不正です。（#{target[:char]}）")
+          msgs.push("#{target[:number]}#{MSG_WEBALT_NTH_CD_STYL}（#{target[:char]}）")
         }
-        msgs.push("半角英字大文字のスート（S,H,D,C）と数字（1〜13）の組み合わせでカードを指定してください。")
+        msgs.push(MSG_WEBALT_SUIT_NUM)
       else
-        msgs.push('5つのカード指定文字は半角スペース区切りで入力してください。（例："S1 H3 D9 C13 S11"）')
+        msgs.push(MSG_WEBALT_SPRT_SPC)
       end
       session[:hand_name] = nil
       redirect_to root_path, alert: msgs.join("\n") and return
@@ -38,7 +38,7 @@ class TopController < ApplicationController
     # -------------------------------------------
 
     unless c_chk.uniq?
-      msgs.push("カードが重複しています。")
+      msgs.push(MSG_WEBALT_CD_DUP)
       session[:hand_name] = nil
       redirect_to root_path, alert: msgs.join("\n") and return
     end
