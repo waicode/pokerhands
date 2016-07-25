@@ -1,6 +1,6 @@
 ja:
   title: 'Check a Porker Hand'
-  placeholder: '5つのカード文字列を入力'
+  placeholder: 'S10 H11 D12 C13 H1'
   hands:
     hd_strt_flsh: 'ストレートフラッシュ'
     hd_4_kd: '4カード'

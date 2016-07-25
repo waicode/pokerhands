@@ -1,6 +1,6 @@
 en:
   title: 'Check a Porker Hand'
-  placeholder: 'Fill in 5 cards'
+  placeholder: 'S10 H11 D12 C13 H1'
   hands:
     hd_strt_flsh: 'Straight flush'
     hd_4_kd: 'Four of a kind'
