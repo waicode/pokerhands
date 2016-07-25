@@ -21,9 +21,3 @@ p{ margin-bottom:0.4em; }
 img{ vertical-align: bottom; }
 a img{ border:none; }
 #header,#contents,#footer{ clear:both; position: relative; }
-
-/* 共通 */
-body{
-    background-color: aliceblue;
-    font-family: Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-}
