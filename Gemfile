@@ -29,4 +29,10 @@ group :test do
   gem 'json_expressions'
 end
 
+group :production do
+  # for Heroku
+  gem 'rails_12factor'
+end
+
+
 
