@@ -9,9 +9,5 @@
 
 <%= yield %>
 
-<% flash.each do |key, value| %>
-    <%= content_tag(:div, simple_format(value), class: "#{key}") %>
-<% end %>
-
 </body>
 </html>
