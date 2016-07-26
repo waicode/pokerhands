@@ -23,8 +23,9 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 + メソッド：POST
 + ヘッダーに CONTENT_TYPE="application/json" を指定
 + ボディに含まれるJSONは以下の形式でカード文字列の配列を指定
-  + { "cards": ["S1 S2 D3 S4 S5", "S1 C1 D1 H1 S5", "S11 S12 D7 S7 H7"] }
-
+```JSON
+{ "cards": ["S1 S2 D3 S4 S5", "S1 C1 D1 H1 S5", "S11 S12 D7 S7 H7"] }
+```
 ## Usage
 1. コードを取得（git clone <repository URL>）
 2. 必要なライブラリをインストール（bundle install）
