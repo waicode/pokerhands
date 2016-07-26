@@ -17,7 +17,7 @@
 
 ### Web
 http://p0kerhands.herokuapp.com
-
++ "S1 S2 D3 S4 S5" の形式でフォームにカード情報を入力してください。
 ### API
 http://p0kerhands.herokuapp.com/api/v1/cards/check
 + メソッド：POST
