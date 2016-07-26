@@ -26,3 +26,6 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
   + { "cards": ["S1 S2 D3 S4 S5", "S1 C1 D1 H1 S5", "S11 S12 D7 S7 H7"] }
 
 ## Usage
+1. コードを取得（git clone <repository URL>）
+2. 必要なライブラリをインストール（bundle install）
+3. Railsアプリケーションを起動（rails s）
