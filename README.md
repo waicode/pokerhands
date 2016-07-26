@@ -1,5 +1,7 @@
-$$![pokerhands](http://p0kerhands.herokuapp.com/image/logo.png "pokerhands")$$
+<div style="text-align:center;">
+![pokerhands](http://p0kerhands.herokuapp.com/image/logo.png "pokerhands")
 ====
+</div>
 
 スート（S,H,D,C）と数字（1～13）の組み合わせで構成された5枚のカード文字列（例: "S10 H11 D12 C13 H1"）を受け取り、ポーカーの役を判定するRailsアプリケーションです。JORKERには対応していません。WebブラウザとAPIのり2つの受口があります。
 
