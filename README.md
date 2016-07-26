@@ -20,7 +20,7 @@ http://p0kerhands.herokuapp.com
 
 ### API
 http://p0kerhands.herokuapp.com/api/v1/cards/check
-+ メソッド：POST
++ POST形式でリクエスト
 + ヘッダーに CONTENT_TYPE="application/json" を指定
 + ボディに含まれるJSONは以下の形式でカード文字列の配列を指定
 ```JSON
