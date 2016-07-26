@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-
 require "rails"
 require "active_job/railtie"
 require "action_controller/railtie"
