@@ -9,13 +9,11 @@ class CardsCheck
 
     # 数値カウント格納用ハッシュの初期化
     @n_cnt_hash = {}
-    13.times{|n| @n_cnt_hash.store((n+1).to_s, 0)}
-    # @n_list.store(0, 0)
+    13.times{|n| @n_cnt_hash.store((n+1).to_s, 0)} # @n_list.store(0, 0)
 
     # スートカウント格納用ハッシュの初期化
     @s_cnt_hash = {}
-    [S_SPD, S_HRT, S_DYA, S_CLB].each{|s| @s_cnt_hash.store(s, 0)}
-    # ["S","H","D","C", "N"].each{|s| @s_cnt_hash.store(s, 0)}
+    [S_SPD, S_HRT, S_DYA, S_CLB].each{|s| @s_cnt_hash.store(s, 0)}  # ["S","H","D","C", "N"].each{|s| @s_cnt_hash.store(s, 0)}
 
   end
 
