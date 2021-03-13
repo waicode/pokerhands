@@ -43,6 +43,7 @@ module Const
   # ------------------------------------
 
   # API
+  MSG_ERR_INV_PRM = 'カード情報が不正です。'
   MSG_ERR_INV_REQ = '不正なリクエストです。'
   MSG_ERR_INV_URL  = '不正なURLです。'
   MSG_ERR_SYS_ERR = 'システムエラーが発生しました。'
