@@ -2,6 +2,8 @@ class Api::ApiController < ActionController::Base
 
   include Const
 
+  skip_before_action :verify_authenticity_token
+
   rescue_from Exception, with: :fatal_error
 
   def fatal_error()

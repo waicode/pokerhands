@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     namespace 'v1' do
       post "cards/check" => "cards#check"
     end
-    get '*path', to: 'api_errors#not_found_error'
-    post '*path', to: 'api_errors#not_found_error'
+    get '*path', to: 'api#not_found_error'
+    post '*path', to: 'api#not_found_error'
   end
 
   get '*path', to: 'application#render_404'
