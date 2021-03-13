@@ -16,16 +16,16 @@ module Const
   HD_HI_CD = '90'
 
   HANDS_NAME = {
-      # HD_RYL_STRT_FLSH => 'Royal Straight flush',
-      HD_STRT_FLSH => I18n.t("hands.hd_strt_flsh"),
-      HD_4_KD => I18n.t("hands.hd_4_kd"),
-      HD_FL_HUS => I18n.t("hands.hd_fl_hus"),
-      HD_FLSH => I18n.t("hands.hd_flsh"),
-      HD_STRT => I18n.t("hands.hd_strt"),
-      HD_3_KD => I18n.t("hands.hd_3_kd"),
-      HD_2_PR => I18n.t("hands.hd_2_pr"),
-      HD_1_PR => I18n.t("hands.hd_1_pr"),
-      HD_HI_CD => I18n.t("hands.hd_hi_cd")
+    # HD_RYL_STRT_FLSH => 'Royal Straight flush',
+    HD_STRT_FLSH => I18n.t("hands.hd_strt_flsh"),
+    HD_4_KD => I18n.t("hands.hd_4_kd"),
+    HD_FL_HUS => I18n.t("hands.hd_fl_hus"),
+    HD_FLSH => I18n.t("hands.hd_flsh"),
+    HD_STRT => I18n.t("hands.hd_strt"),
+    HD_3_KD => I18n.t("hands.hd_3_kd"),
+    HD_2_PR => I18n.t("hands.hd_2_pr"),
+    HD_1_PR => I18n.t("hands.hd_1_pr"),
+    HD_HI_CD => I18n.t("hands.hd_hi_cd")
   }
 
   # ------------------------------------
@@ -43,9 +43,10 @@ module Const
   # ------------------------------------
 
   # API
+  MSG_ERR_INV_JSN = 'JSONの形式が不正です。'
   MSG_ERR_INV_PRM = 'カード情報が不正です。'
   MSG_ERR_INV_REQ = '不正なリクエストです。'
-  MSG_ERR_INV_URL  = '不正なURLです。'
+  MSG_ERR_INV_URL = '不正なURLです。'
   MSG_ERR_SYS_ERR = 'システムエラーが発生しました。'
 
   MSG_ERR_SPRT_SPC = '5つのカード指定文字を半角スペース区切りで入力してください。'
@@ -59,7 +60,7 @@ module Const
   MSG_WEBALT_NTH_CD_STYL = '番目のカード指定文字が不正です。'
   MSG_WEBALT_SUIT_NUM = '半角英字大文字のスート（S,H,D,C）と数字（1〜13）の組み合わせでカードを指定してください。'
   MSG_WEBALT_SPRT_SPC = '5つのカード指定文字を半角スペース区切りで入力してください。（例："S1 H3 D9 C13 S11"）'
-  MSG_WEBALT_CD_DUP  = "カードが重複しています。"
+  MSG_WEBALT_CD_DUP = "カードが重複しています。"
 
   # ------------------------------------
   # その他

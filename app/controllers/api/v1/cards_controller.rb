@@ -1,8 +1,6 @@
-class Api::V1::CardsController < ApplicationController
+class Api::V1::CardsController < Api::ApiController
 
   include Const
-
-  skip_before_action :verify_authenticity_token
 
   def check
     cards = params[:cards]
