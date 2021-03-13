@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  # Web
+  root 'top#show'
+  put '/check', to: 'top#check'
+
+  # API
+  namespace 'api' do
+    namespace 'v1' do
+      post "cards/check" => "cards#check"
+    end
+  end
+  get '*path', to: 'application#render_404'
+
 end
