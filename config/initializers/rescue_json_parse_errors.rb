@@ -7,12 +7,12 @@ module Middleware
     def call(env)
       @app.call(env)
     rescue ActionDispatch::Http::Parameters::ParseError
-      raise unless %r{application/json}.match?(env['HTTP_ACCEPT'])
-
-      [
-        400, { 'Content-Type' => 'application/json' },
-        [{ status: 400, error: 'You submitted a malformed JSON.' }.to_json]
-      ]
+      unless %r{application/json}.match?(env['HTTP_ACCEPT'])
+        ApiErrorsController.action(:dispatch_error).call(env)
+      end
+      ApiErrorsController.action(:parse_error).call(env)
+    rescue => e
+      ApiErrorsController.action(:dispatch_error).call(env)
     end
   end
 end
