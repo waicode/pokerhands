@@ -1,17 +1,42 @@
 $card-width: 600px;
+$blur-size: 3px;
 
-body{
-  background: image-url("porkerhands_bg_1920x1280.jpg") no-repeat center top fixed;
-  font-family: Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+body {
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto,
+  "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-#wrapper{
+/*背景画像の設定をする*/
+.bgImage {
+  background: image-url("porkerhands_bg_1920x1600.png") no-repeat;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden; /*ブラー効果でボヤけた部分を非表示*/
+}
+
+/*:beforeにぼかし効果を設定する*/
+.bgImage:before {
+  content: '';
+  background: inherit; /*.bgImageで設定した背景画像を継承する*/
+  filter: blur($blur-size);
+  position: absolute;
+  /* ブラー効果で画像の端がボヤけた分だけ位置を調整 */
+  top: -$blur-size;
+  left: -$blur-size;
+  right: -$blur-size;
+  bottom: -$blur-size;
+  z-index: -1; /* 重なり順序を一番下へ */
+}
+
+
+#wrapper {
   width: $card-width;
   margin: 0 auto;
   color: #323232;
 }
 
-#header{
+#header {
   font-size: 1.1rem;
   margin-top: 20px;
   height: 100px;
@@ -19,69 +44,86 @@ body{
   text-align: center;
 }
 
-#contents{
+#contents {
 
   height: $card-width * 1 / 1.618;
-  background-color: rgba(240,240,240,0.9);
+  background-color: rgba(240, 240, 240, 0.9);
   border-radius: 12px;
 
-  #form{
+  #form {
     text-align: center;
     font-size: 2.0rem;
 
-    p{
+    p {
       margin-bottom: 0;
     }
 
-    input#cards{
+    input#cards {
       margin-top: 48px;
       text-align: center;
       font-size: 1.8rem;
-      width: 300px;
-      height: 50px;
+      width: 326px;
+      height: 52px;
       margin-bottom: 10px;
+      border: 3px solid;
+      border-radius: 6px;
+      border-color: #BDBDBD;
     }
 
-    input#check{
+    input#cards::placeholder {
+      color: #BDBDBD;
+    }
+
+    input#check {
       background-color: #8D6E63;
       color: #FFF;
-      margin-top: 8px;
-      margin-bottom: 6px;
+      margin-top: 12px;
+      margin-bottom: 24px;
       font-size: 1.8rem;
+      line-height: 1.2;
       font-weight: bold;
       border-radius: 24px;
       padding: 8px 16px;
       border: none;
+      box-shadow: 0 3px 6px -2px rgba(100, 110, 167, 0.2);
       width: 240px;
+      outline: none;
     }
 
-    input#check:hover { opacity: 0.5; }
-    input#check:active { opacity: 0.3; }
+    input#check:hover {
+      opacity: 0.5;
+    }
+
+    input#check:active {
+      opacity: 0.3;
+    }
 
   }
 
-  .alert{
+  .alert {
     box-sizing: border-box;
     margin: 0 auto;
     margin-top: 12px;
-    padding: 10px 20px;
+    padding: 16px 24px;
     width: 500px;
-    background-color: #EF9A9A;
-    color: #222;
-    border-radius: 4px;
-    font-size: 0.8rem;
+    background-color: #FFCCBC;
+    color: #000;
+    border-radius: 1px;
+    box-shadow: 0 3px 6px -2px rgba(0, 10, 60, 0.2);
+    font-size: 1.0rem;
   }
 
-  #hand{
-    margin-top: 30px;
+  #hand {
     height: 100px;
     line-height: 100px;
     text-align: center;
     font-size: 2.4rem;
+    font-weight: bold;
+    color: #5D4037;
   }
 }
 
-#footer{
+#footer {
   height: 50px;
   line-height: 50px;
   text-align: center;

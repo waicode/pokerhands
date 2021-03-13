@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+  include Const
+
   protect_from_forgery with: :exception
 
   rescue_from ActionController::RoutingError, with: :render_404
@@ -9,7 +11,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, alert: MSG_WEBALT_INV_URL
   end
 
-  def render500
+  def render_500
     redirect_to root_path, alert: MSG_WEBALT_SYS_ERR
   end
 

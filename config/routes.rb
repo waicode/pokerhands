@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   put '/check', to: 'top#check'
 
   # API
-  mount API::Root => '/api'
-
+  namespace 'api' do
+    namespace 'v1' do
+      post "cards/check" => "cards#check"
+    end
+  end
   get '*path', to: 'application#render_404'
 
 end
