@@ -47,8 +47,3 @@ group :test do
   gem 'rspec-rails'
   gem 'json_expressions'
 end
-
-group :production do
-  # for Heroku
-  gem 'rails_12factor'
-end
