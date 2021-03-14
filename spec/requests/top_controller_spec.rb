@@ -1,14 +1,18 @@
 require 'rails_helper'
 
-describe TopController, type: :controller do
+describe TopController, :type => :request do
 
   describe 'GET #show' do
+
+    before do
+      @path = '/'
+    end
 
     describe 'Render' do
 
       it "renders the :show template" do
-        get :show
-        expect(response).to render_template :show
+        get @path
+        expect(response.body).to include "Check a Porker Hand"
       end
 
     end
@@ -17,18 +21,22 @@ describe TopController, type: :controller do
 
   describe 'POST #check' do
 
+    before do
+      @path = '/check'
+    end
+
     describe 'Redirect' do
 
       describe 'OK' do
         it "rendirects to the :show " do
-          get :check, cards: "S1 H2 D3 C4 H12"
+          get @path, params: { cards: "S1 H2 D3 C4 H12" }
           expect(response).to redirect_to(:root)
         end
       end
 
       describe 'Alert' do
         it "rendirects to the :show " do
-          get :check, cards: "A B C D E"
+          put @path, params: { cards: "A B C D E" }
           expect(response).to redirect_to(:root)
         end
       end
