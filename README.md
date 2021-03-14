@@ -5,9 +5,6 @@
 - スート（S,H,D,C）と数字（1～13）の組み合わせで構成された5枚のカード文字列を受け取ります。
 - JORKER、ロイヤルストレートフラッシュには対応していません。
 
------
-## 使い方
-
 ### Web
 
 - ブラウザのフォームから1セットのカード情報を受け取ります。
@@ -19,6 +16,7 @@
 - 同一の役であれば同じ強さとし、スートや数字は強弱を決める際に考慮しません。
 
 -----
+
 ## デモ
 
 ### Web
@@ -29,7 +27,6 @@ http://p0kerhands.herokuapp.com
 
 ![操作方法：Web画面](https://i.gyazo.com/b21cc57e96aa5582016d05080710bb06.gif)
 
-
 ### API
 
 http://p0kerhands.herokuapp.com/api/v1/cards/check
@@ -39,6 +36,7 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 - ボディに含まれるJSONは以下の形式でカード文字列の配列を指定してください。
 
 #### Request
+
 ```JSON
 {
   "cards": [
@@ -48,8 +46,11 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
   ]
 }
 ```
+
 #### Response
+
 ##### 判定結果
+
 ```JSON
 {
   "results": [
@@ -71,7 +72,9 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
   ]
 }
 ```
+
 ##### エラーあり
+
 ```JSON
 {
   "results": [
@@ -84,7 +87,7 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
   "errors": [
     {
       "card": "S11 S12 D7 S7 H7 H2",
-      "msg": "5つのカード指定文字を半角スペース区切りで入力してください。"
+      "message": "5つのカード指定文字を半角スペース区切りで入力してください。"
     }
   ]
 }
@@ -93,15 +96,15 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 ### Architecture
 
 - デモアプリは[Heroku]へデプロイしています。
-- フリープランなので、SSL化のために[Cloudflare]を組み合わせて使っています。
+- フリープランなのでSSL化のために[Cloudflare]を組み合わせています。
 
 -----
-    
+
 ## 開発環境で使うには
 
 1. はじめにGitからコードを取得（`git clone <repository URL>`）します。
 2. 必要なライブラリをbundlerを使ってインストール（`bundle install`） します。
-   1. 事前に`gem install bundler`でbundlerをインストールしておいてください。
+    1. 事前に`gem install bundler`でbundlerをインストールしておいてください。
 3. Railsアプリケーションを起動（`rails s`）してWeb画面/APIにアクセスできます。
 
 -----
@@ -111,6 +114,6 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 - Rails 6.1.2
 - Ruby 3.0.0
 
-
 [Heroku]: https://jp.heroku.com/
+
 [Cloudflare]: https://www.cloudflare.com/ja-jp/
