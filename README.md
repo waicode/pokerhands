@@ -60,6 +60,8 @@
     - 共通のビジネスロジックについてもテストコードを書いてください。（形式は任意）
 
 <br />
+説明は以上です。では、健闘を祈ります！ガンバって✊
+
 <br />
 <br />
 <br />
@@ -67,9 +69,10 @@
 <br />
 <br />
 <br />
-<p style="text-align: center;">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</p>
-<p style="text-align: center; font-weight: bold">⚠️ 注意：ここから下には「答え」が書いてあります 👇👇👇</p>
-<p style="text-align: center;">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</p>
+<br />
+<div style="text-align: center; font-weight: bold"">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
+<div style="text-align: center; font-weight: bold">⚠️ 注意：ここから下には「答え」が書いてあります 👇👇👇</div>
+<div style="text-align: center; font-weight: bold"">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
 <br />
 <br />
 <br />
