@@ -1,4 +1,4 @@
-# ![pokerhands](http://p0kerhands.herokuapp.com/image/logo.png "pokerhands")
+![pokerhands](http://p0kerhands.herokuapp.com/image/logo.png "pokerhands")
 
 - ポーカーの役を判定するRailsアプリケーションです。
 - Web画面（ブラウザ）とREST APIの2つの受け口があります。
