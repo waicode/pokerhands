@@ -59,7 +59,6 @@
     - Web画面、REST API共にRSpec:Requestでテストコードを書いてください。
     - 共通のビジネスロジックについてもテストコードを書いてください。（形式は任意）
 
-<br />
 説明は以上です。では、健闘を祈ります！ガンバって✊
 
 <br />
@@ -70,11 +69,6 @@
 <br />
 <br />
 <br />
-{::nomarkdown}
-<div style="text-align: center; font-weight: bold">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
-<div style="text-align: center; font-weight: bold">⚠️ 注意：ここから下には「答え」が書いてあります 👇👇👇</div>
-<div style="text-align: center; font-weight: bold">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
-{:/}
 <br />
 <br />
 <br />
@@ -83,11 +77,10 @@
 <br />
 <br />
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
+### ⚠️ 注意：ここから下には「答え」が書いてあります 👇👇👇
+
+-----
 
 ## 🙈 Demo (One Answer)
 
