@@ -15,8 +15,6 @@
 - 複数のカード情報をリクエストし、それらに対応する役と最も強い役の情報を返却します。
 - 同一の役であれば同じ強さとし、スートや数字は強弱を決める際に考慮しません。
 
------
-
 ## デモ
 
 ### Web
@@ -98,16 +96,12 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 - デモアプリは[Heroku]へデプロイしています。
 - フリープランなのでSSL化のために[Cloudflare]を組み合わせています。
 
------
-
 ## 開発環境で使うには
 
 1. はじめにGitからコードを取得（`git clone <repository URL>`）します。
 2. 必要なライブラリをbundlerを使ってインストール（`bundle install`） します。
     1. 事前に`gem install bundler`でbundlerをインストールしておいてください。
 3. Railsアプリケーションを起動（`rails s`）してWeb画面/APIにアクセスできます。
-
------
 
 ## Versions
 
