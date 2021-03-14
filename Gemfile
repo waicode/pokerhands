@@ -6,6 +6,9 @@ ruby '3.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
 
+# locales
+gem 'rails-i18n'
+
 # Icon
 gem "font-awesome-rails"
 
