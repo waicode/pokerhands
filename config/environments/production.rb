@@ -8,9 +8,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  # config.assets.css_compressor = :sass
-
-  config.assets.compile = false
+  config.assets.compile = true
 
   # config.asset_host = 'http://assets.example.com'
 
