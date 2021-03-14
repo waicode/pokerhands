@@ -14,7 +14,7 @@ class Api::V1::CardsController < Api::ApiController
 
     if cards.blank? or !cards.instance_of?(Array)
       # cardsのパラメータがない、または配列でない場合はリクエストエラー
-      render json: { errors: [{ msg: MSG_ERR_INV_PRM }] }, status: :bad_request and return
+      render json: { errors: [{ message: MSG_ERR_INV_PRM }] }, status: :bad_request and return
     end
 
     cards.each { |card|
@@ -32,12 +32,12 @@ class Api::V1::CardsController < Api::ApiController
         if schk_rslt[:targets].present?
           schk_rslt[:targets].each { |target|
             @errors.push(
-              { card: card, msg: "#{target[:number]}#{MSG_ERR_NTH_CD_STYL} (#{target[:char]})" }
+              { card: card, message: "#{target[:number]}#{MSG_ERR_NTH_CD_STYL} (#{target[:char]})" }
             )
           }
         else
           @errors.push(
-            { card: card, msg: MSG_ERR_SPRT_SPC }
+            { card: card, message: MSG_ERR_SPRT_SPC }
           )
         end
         next
@@ -49,7 +49,7 @@ class Api::V1::CardsController < Api::ApiController
 
       unless c_chk.uniq?
         @errors.push(
-          { card: card, msg: MSG_ERR_CD_DUP }
+          { card: card, message: MSG_ERR_CD_DUP }
         )
         next
       end
@@ -89,7 +89,7 @@ class Api::V1::CardsController < Api::ApiController
     end
 
     # 判定結果もエラー結果もない場合はシステムエラー
-    render json: { error: [{ msg: MSG_ERR_SYS_ERR }] }, status: :internal_server_error and return
+    render json: { error: [{ message: MSG_ERR_SYS_ERR }] }, status: :internal_server_error and return
 
   end
 

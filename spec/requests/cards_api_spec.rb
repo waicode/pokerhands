@@ -13,11 +13,11 @@ describe Api::V1::CardsController, :type => :request do
 
     before do
       @path_invalid = '/api/v1/abc'
-      @pattern_json = { errors: [{ msg: MSG_ERR_INV_JSN }] }
-      @pattern_pram = { errors: [{ msg: MSG_ERR_INV_PRM }] }
-      @pattern_e400 = { errors: [{ msg: MSG_ERR_INV_REQ }] }
-      @pattern_e404 = { errors: [{ msg: MSG_ERR_INV_URL }] }
-      @pattern_e500 = { errors: [{ msg: MSG_ERR_SYS_ERR }] }
+      @pattern_json = { errors: [{ message: MSG_ERR_INV_JSN }] }
+      @pattern_pram = { errors: [{ message: MSG_ERR_INV_PRM }] }
+      @pattern_e400 = { errors: [{ message: MSG_ERR_INV_REQ }] }
+      @pattern_e404 = { errors: [{ message: MSG_ERR_INV_URL }] }
+      @pattern_e500 = { errors: [{ message: MSG_ERR_SYS_ERR }] }
     end
 
     it "ボディのJSONが壊れている→不正リクエスト" do
@@ -149,7 +149,7 @@ describe Api::V1::CardsController, :type => :request do
           post @path, params: req.to_json, headers: @opts
           p "単数 1件 カード全体の形式エラー: #{response.body}"
           expect(response.status).to eq(400)
-          pattern = { errors: [{ card: "S1S2D3 S4 S5", msg: MSG_ERR_SPRT_SPC }] }
+          pattern = { errors: [{ card: "S1S2D3 S4 S5", message: MSG_ERR_SPRT_SPC }] }
           expect(response.body).to match_json_expression(pattern)
         end
         it "1件→1番目のカード形式エラー" do
@@ -157,7 +157,7 @@ describe Api::V1::CardsController, :type => :request do
           post @path, params: req.to_json, headers: @opts
           p "単数 1件 1番目のカード形式エラー: #{response.body}"
           expect(response.status).to eq(400)
-          pattern = { errors: [{ card: "S99 S2 D3 S4 S5", msg: "1#{MSG_ERR_NTH_CD_STYL} (S99)" }] }
+          pattern = { errors: [{ card: "S99 S2 D3 S4 S5", message: "1#{MSG_ERR_NTH_CD_STYL} (S99)" }] }
           expect(response.body).to match_json_expression(pattern)
         end
         it "1件→2番目と5番目のカード形式エラー" do
@@ -166,8 +166,8 @@ describe Api::V1::CardsController, :type => :request do
           p "単数 1件 2番目と5番目のカード形式エラー: #{response.body}"
           expect(response.status).to eq(400)
           pattern = { errors: [
-            { card: "S9 AA D9 S4 BB", msg: "2#{MSG_ERR_NTH_CD_STYL} (AA)" },
-            { card: "S9 AA D9 S4 BB", msg: "5#{MSG_ERR_NTH_CD_STYL} (BB)" }
+            { card: "S9 AA D9 S4 BB", message: "2#{MSG_ERR_NTH_CD_STYL} (AA)" },
+            { card: "S9 AA D9 S4 BB", message: "5#{MSG_ERR_NTH_CD_STYL} (BB)" }
           ] }
           expect(response.body).to match_json_expression(pattern)
         end
@@ -183,10 +183,10 @@ describe Api::V1::CardsController, :type => :request do
             expect(response.status).to eq(400)
             pattern = {
               errors: [
-                { card: "S1S2D3 S4 S5", msg: MSG_ERR_SPRT_SPC },
-                { card: "S99 S2 D3 S4 S5", msg: "1#{MSG_ERR_NTH_CD_STYL} (S99)" },
-                { card: "S9 AA D9 S4 BB", msg: "2#{MSG_ERR_NTH_CD_STYL} (AA)" },
-                { card: "S9 AA D9 S4 BB", msg: "5#{MSG_ERR_NTH_CD_STYL} (BB)" }
+                { card: "S1S2D3 S4 S5", message: MSG_ERR_SPRT_SPC },
+                { card: "S99 S2 D3 S4 S5", message: "1#{MSG_ERR_NTH_CD_STYL} (S99)" },
+                { card: "S9 AA D9 S4 BB", message: "2#{MSG_ERR_NTH_CD_STYL} (AA)" },
+                { card: "S9 AA D9 S4 BB", message: "5#{MSG_ERR_NTH_CD_STYL} (BB)" }
               ]
             }
             expect(response.body).to match_json_expression(pattern)
@@ -206,10 +206,10 @@ describe Api::V1::CardsController, :type => :request do
                 { card: "S1 S7 S9 D4 C9", hand: HANDS_NAME[HD_1_PR], best: false }
               ],
               errors: [
-                { card: "S1S2D3 S4 S5", msg: MSG_ERR_SPRT_SPC },
-                { card: "S99 S2 D3 S4 S5", msg: "1#{MSG_ERR_NTH_CD_STYL} (S99)" },
-                { card: "S9 AA D9 S4 BB", msg: "2#{MSG_ERR_NTH_CD_STYL} (AA)" },
-                { card: "S9 AA D9 S4 BB", msg: "5#{MSG_ERR_NTH_CD_STYL} (BB)" }
+                { card: "S1S2D3 S4 S5", message: MSG_ERR_SPRT_SPC },
+                { card: "S99 S2 D3 S4 S5", message: "1#{MSG_ERR_NTH_CD_STYL} (S99)" },
+                { card: "S9 AA D9 S4 BB", message: "2#{MSG_ERR_NTH_CD_STYL} (AA)" },
+                { card: "S9 AA D9 S4 BB", message: "5#{MSG_ERR_NTH_CD_STYL} (BB)" }
               ]
             }
             expect(response.body).to match_json_expression(pattern)

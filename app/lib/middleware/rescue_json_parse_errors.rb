@@ -13,9 +13,9 @@ module Middleware
       @app.call(env)
     rescue ActionDispatch::Http::Parameters::ParseError
       # JSONパースエラー
-      [400, CONTENT_TYPE_JSON_HASH, [{ errors: [{ msg: MSG_ERR_INV_JSN }] }.to_json]]
+      [400, CONTENT_TYPE_JSON_HASH, [{ errors: [{ message: MSG_ERR_INV_JSN }] }.to_json]]
     rescue => e
-      [500, CONTENT_TYPE_JSON_HASH, [{ errors: [{ msg: MSG_ERR_SYS_ERR }] }.to_json]]
+      [500, CONTENT_TYPE_JSON_HASH, [{ errors: [{ message: MSG_ERR_SYS_ERR }] }.to_json]]
     end
   end
 end

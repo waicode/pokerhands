@@ -8,12 +8,12 @@ class Api::ApiController < ActionController::Base
 
   def fatal_error()
     # その他の例外
-    render json: { errors: [{ msg: MSG_ERR_SYS_ERR }] }, status: :internal_server_error
+    render json: { errors: [{ message: MSG_ERR_SYS_ERR }] }, status: :internal_server_error
   end
 
   def not_found_error()
     # ルーティングなし
-    render json: { errors: [{ msg: MSG_ERR_INV_URL }] }, status: :not_found
+    render json: { errors: [{ message: MSG_ERR_INV_URL }] }, status: :not_found
   end
 
 end
