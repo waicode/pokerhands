@@ -127,11 +127,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (6.1.3)
       actionpack (= 6.1.3)
       activesupport (= 6.1.3)
@@ -210,7 +205,6 @@ DEPENDENCIES
   listen (~> 3.3)
   puma (~> 5.0)
   rails (~> 6.1.0)
-  rails_12factor
   rspec-rails
   ruby-debug-ide (= 0.7.2)
   sass-rails (>= 6)
