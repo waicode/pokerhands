@@ -4,29 +4,53 @@
  *= require font-awesome
  */
 
-/* リセット */
-body, h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    padding: 0;
+
+/* A Modern CSS Reset */
+
+*, *::before, *::after {
+    box-sizing: border-box
 }
 
-p {
-    margin-bottom: 0.4em;
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+    margin: 0
 }
 
-img {
-    vertical-align: bottom;
+ul[role="list"], ol[role="list"] {
+    list-style: none
 }
 
-a img {
-    border: none;
+html:focus-within {
+    scroll-behavior: smooth
 }
 
-#header, #contents, #footer {
-    clear: both;
-    position: relative;
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5
 }
 
-input {
-    outline: none;
+a:not([class]) {
+    text-decoration-skip-ink: auto
+}
+
+img, picture {
+    max-width: 100%;
+    display: block
+}
+
+input, button, textarea, select {
+    font: inherit
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto
+    }
+
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important
+    }
 }
