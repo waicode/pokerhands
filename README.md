@@ -1,3 +1,4 @@
+{: align="center"}
 ![pokerhands](https://i.gyazo.com/bef02a77a41b4afa8e6d734b484ade78.png "pokerhands")
 
 ## Ruby on Rails Learning Ccontents
@@ -48,8 +49,8 @@
 - アプリケーションはRuby on Railsを使って構築してください。
 - Web画面とREST APIで共通で使うビジネスロジックは1箇所にまとめて汎化させてください。
 - Rubyのテストフレームワーク「RSpec」でテストコードを書き、全てパスさせてください。
-  - Web画面、REST API共にRSpec:Requestでテストコードを書いてください。
-  - 共通のビジネスロジックについてもテストコードを書いてください。（形式は任意）
+    - Web画面、REST API共にRSpec:Requestでテストコードを書いてください。
+    - 共通のビジネスロジックについてもテストコードを書いてください。（形式は任意）
 
 ## Demo (One Answer)
 
