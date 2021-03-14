@@ -1,5 +1,4 @@
-{: align="center"}
-![pokerhands](https://i.gyazo.com/bef02a77a41b4afa8e6d734b484ade78.png "pokerhands")
+![pokerhands](https://i.gyazo.com/ed60929f49851d1ba31131dfde793264.png "pokerhands")
 
 ## Ruby on Rails Learning Ccontents
 
