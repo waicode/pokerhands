@@ -70,9 +70,11 @@
 <br />
 <br />
 <br />
-<div style="text-align: center; font-weight: bold"">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
+{::nomarkdown}
+<div style="text-align: center; font-weight: bold">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
 <div style="text-align: center; font-weight: bold">⚠️ 注意：ここから下には「答え」が書いてあります 👇👇👇</div>
-<div style="text-align: center; font-weight: bold"">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
+<div style="text-align: center; font-weight: bold">・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・</div>
+{:/}
 <br />
 <br />
 <br />
