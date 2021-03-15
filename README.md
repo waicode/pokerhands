@@ -179,6 +179,8 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 - Rails 6.1.2
 - Ruby 3.0.0
 
+<br />
+
 [Heroku]: https://jp.heroku.com/
 
 [Cloudflare]: https://www.cloudflare.com/ja-jp/
