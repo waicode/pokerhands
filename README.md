@@ -1,4 +1,4 @@
-![pokerhands](https://i.gyazo.com/ed60929f49851d1ba31131dfde793264.png "pokerhands")
+![pokerhands](https://i.gyazo.com/80f79396d4f4d2563ce0e687e01a33f1.png "pokerhands")
 
 ## 📕 Rails Practical Learning Contents
 
