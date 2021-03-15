@@ -21,6 +21,8 @@
 - ビジネスロジックを汎化させる **DRY原則な書き方** が身につきます。
 - DB接続なしは賛否両論ですが **MVCを自ら崩して使えるかどうか** 実力が試されます。
 
+<br />
+
 ## 🔥 Challenge
 
 ### Overview
@@ -161,12 +163,16 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 
 - デモアプリは[Heroku]へデプロイしています。
 
+<br />
+
 ## 🔨 For Development
 
 1. はじめにGitからコードを取得（`git clone <repository URL>`）します。
 2. 必要なライブラリをbundlerを使ってインストール（`bundle install`） します。
     1. 事前に`gem install bundler`でbundlerをインストールしておいてください。
 3. Railsアプリケーションを起動（`rails s`）してWeb画面/APIにアクセスできます。
+
+<br />
 
 ## ⚙️ Versions
 
