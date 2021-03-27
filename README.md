@@ -1,8 +1,8 @@
 ![pokerhands](https://i.gyazo.com/80f79396d4f4d2563ce0e687e01a33f1.png "pokerhands")
 
-## 📕 Rails Practical Learning Contents
+# 📕 Rails Practical Learning Contents
 
-### またの名を **「Railsの試練」**
+## またの名を **「Railsの試練」**
 
 - Ruby on Rails初学者向けの **実践を意識したサンプルアプリケーション構築** の教材です。
     - このリポジトリには「一つの解答」としてサンプルコードを載せています。
@@ -15,7 +15,7 @@
 - なお、OR Mapper（Active Record）を使ったModelとDatabaseの接続はありません。
     - Database接続が必要なアプリの構築は別の教材で学んでください。
 
-### どこが実践的？
+## どこが実践的？
 
 - Railsにおける **Web画面/APIコーディングの基本** を抑えることができます。
 - ビジネスロジックを汎化させる **DRY原則な書き方** が身につきます。
@@ -23,9 +23,9 @@
 
 <br />
 
-## 🔥 Challenge
+# 🔥 Challenge
 
-### Overview
+## Overview
 
 - ポーカーの役判定をするアプリケーションを作成してください。
     - 入力された文字列を「カードの数字とスートの組み合わせ」とみなします。
@@ -37,14 +37,14 @@
         - ただし、ロイヤルストレートフラッシュはありません。
     - Web画面とREST APIの両方からリクエストを受けられるようにしてください。
 
-### Web
+## Web
 
 - 入力値からポーカーの役を判定し、役名を表示するWebページを作成してください。
     - ブラウザのフォームから1セットのカード情報を受け取ります。
     - 対応するポーカーの役を返却して画面上に表示します。
     - エラーで判定できなかった場合は、エラーメッセージを表示してください。
 
-### API
+## API
 
 - 複数のカード情報をリクエストし、それらに対応する役と最も強い役の情報を返却してください。
 - 同一の役であれば同じ強さとし、スートや数字は強弱を決める際に考慮しない仕様とします。
@@ -53,7 +53,7 @@
     - HTTP/POST形式でリクエスト
     - headerに`CONTENT_TYPE=”application/json”`を指定
 
-### Contract
+## Contract
 
 - アプリケーションはRuby on Railsを使って構築してください。
 - Web画面とREST APIで共通で使うビジネスロジックは1箇所にまとめて汎化させてください。
@@ -83,25 +83,25 @@
 <br />
 <br />
 
-### ⚠️ 注意：ここから下には「解答例」が書いてあります 👇👇👇
+## ⚠️ 注意：ここから下には「解答例」が書いてあります 👇👇👇
 
 -----
 
 <br />
 
-## 🙈 Demo (One Answer)
+# 🙈 Demo (One Answer)
 
-### Web
+## Web
 
 http://p0kerhands.herokuapp.com
 
 ![操作方法：Web画面](https://i.gyazo.com/b21cc57e96aa5582016d05080710bb06.gif)
 
-### API
+## API
 
 http://p0kerhands.herokuapp.com/api/v1/cards/check
 
-#### Request
+### Request
 
 ```JSON
 {
@@ -113,9 +113,9 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 }
 ```
 
-#### Response
+### Response
 
-##### 判定結果
+#### 判定結果
 
 ```JSON
 {
@@ -139,7 +139,7 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 }
 ```
 
-##### エラーあり
+#### エラーあり
 
 ```JSON
 {
@@ -159,13 +159,13 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 }
 ```
 
-### Architecture
+## Architecture
 
 - デモアプリは[Heroku]へデプロイしています。
 
 <br />
 
-## 🔨 For Development
+# 🔨 For Development
 
 1. はじめにGitからコードを取得（`git clone <repository URL>`）します。
 2. 必要なライブラリをbundlerを使ってインストール（`bundle install`） します。
@@ -174,7 +174,7 @@ http://p0kerhands.herokuapp.com/api/v1/cards/check
 
 <br />
 
-## ⚙️ Versions
+# ⚙️ Versions
 
 - Rails 6.1.2
 - Ruby 3.0.0
